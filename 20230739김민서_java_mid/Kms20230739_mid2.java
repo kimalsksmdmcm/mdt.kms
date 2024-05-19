@@ -36,7 +36,7 @@ public class Kms20230739_mid2 {
 
 		        String finalChoice = removeChoice.equals(firstChoice) ? secondChoice : firstChoice;
 
-		        // 상대방의 선택 (랜덤하게 선택하도록 변경)
+		        // 상대방의 선택 (랜덤하게 선택 변경)
 		        String[] opponentChoices = {"가위", "바위", "보"};
 		        int randomIndex = (int) (Math.random() * opponentChoices.length);
 		        String opponentFinalChoice = opponentChoices[randomIndex];
@@ -60,7 +60,7 @@ public class Kms20230739_mid2 {
 		        return choice.equals("가위") || choice.equals("바위") || choice.equals("보");
 		    }
 
-		    // 승자 결정 메서드
+		    // 승자 결정 
 		    public static String determineWinner(String playerChoice, String opponentChoice) {
 		        if (playerChoice.equals(opponentChoice)) {
 		            return "무승부입니다!";
