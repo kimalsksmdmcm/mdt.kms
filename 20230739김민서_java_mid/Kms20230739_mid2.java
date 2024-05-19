@@ -24,11 +24,11 @@ public class Kms20230739_mid2 {
 		            secondChoice = getUserInput(scanner);
 		        }
 
-		        // 하나의 선택 제거
+		        // 선택 제거
 		        System.out.println("제거할 선택을 입력하세요: " + firstChoice + " 또는 " + secondChoice);
 		        String removeChoice = getUserInput(scanner);
 
-		        // 제거할 선택이 올바른지 확인
+		        // 제거할 선택 확인
 		        while (!isValidChoice(removeChoice) || !removeChoice.equals(firstChoice) && !removeChoice.equals(secondChoice)) {
 		            System.out.println("잘못된 입력입니다. 다시 입력하세요: " + firstChoice + " 또는 " + secondChoice);
 		            removeChoice = getUserInput(scanner);
@@ -36,7 +36,7 @@ public class Kms20230739_mid2 {
 
 		        String finalChoice = removeChoice.equals(firstChoice) ? secondChoice : firstChoice;
 
-		        // 상대방의 선택 (랜덤하게 선택 변경)
+		        // 상대방 선택 (랜덤하게 선택 변경)
 		        String[] opponentChoices = {"가위", "바위", "보"};
 		        int randomIndex = (int) (Math.random() * opponentChoices.length);
 		        String opponentFinalChoice = opponentChoices[randomIndex];
@@ -50,7 +50,7 @@ public class Kms20230739_mid2 {
 		        scanner.close();
 		    }
 
-		    // 사용자 입력 받기
+		    // 사용자 입력
 		    public static String getUserInput(Scanner scanner) {
 		        return scanner.next();
 		    }
